@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int t1 = 0;
+	int t1 = 9;
 	std::cout << t1 << std::endl;
 
 
