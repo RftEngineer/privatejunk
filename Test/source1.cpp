@@ -68,14 +68,24 @@ int main(void)
 		}
 		else if (input1[i] == ')')
 		{
+			struct pair_pos temp_pos;
+			
 			int temp = sample1.popParenthese();
 			if (temp < 0)
 			{
 				std::cout << "not match" << std::endl;
 				return 0;
 			}
-			std::cout << temp << " " << i << std::endl;
+			temp_pos.x = temp;
+			temp_pos.y = i;
+			//std::cout << temp << " " << i << std::endl;
+			pos1.push_back(temp_pos);
 		}
+	}
+
+	for (int i = 0; i < pos1.size(); i++)
+	{
+		std::cout << pos1[i].x << " " << pos1[i].y << std::endl;
 	}
 	return 0;
 	
